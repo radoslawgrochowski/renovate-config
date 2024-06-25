@@ -4,5 +4,7 @@
   "extends": [
     "config:best-practices",
     "helpers:pinGitHubActionDigestsToSemver"
-  ]
+  ],
+  "lockFileMaintenance": { "enabled": true },
+  "nix": { "enabled": true }
 }
