@@ -1,5 +1,8 @@
 {
   "addLabels": ["deps"],
   "dependencyDashboard": true,
-  "extends": ["helpers:pinGitHubActionDigestsToSemver"]
+  "extends": [
+    "config:best-practices",
+    "helpers:pinGitHubActionDigestsToSemver"
+  ]
 }
