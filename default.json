@@ -6,5 +6,6 @@
     "helpers:pinGitHubActionDigestsToSemver"
   ],
   "lockFileMaintenance": { "enabled": true },
-  "nix": { "enabled": true }
+  "nix": { "enabled": true },
+  "npm": { "minimumReleaseAge": "7 days" }
 }
