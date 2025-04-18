@@ -3,9 +3,22 @@
   "dependencyDashboard": true,
   "extends": [
     "config:best-practices",
-    "helpers:pinGitHubActionDigestsToSemver"
+    "helpers:pinGitHubActionDigestsToSemver",
+    ":automergeLinters",
+    ":automergeTesters",
+    ":automergeTypes"
   ],
   "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 4am on friday"]
+  },
+  "digest": {
+    "automerge": true
+  },
+  "docker-compose": {
+    "enabled": true
+  },
+  "dockerfile": {
     "enabled": true
   },
   "nix": {
@@ -19,9 +32,14 @@
       "description": "Nix: Weekly flake.lock maintenance",
       "matchPackageManagers": ["nix"],
       "lockFileMaintenance": {
-        "schedule": ["before 4am on friday"],
         "automerge": true
       }
+    },
+    {
+      "description": "Automerge patch and minor updates for GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
     }
   ]
 }
