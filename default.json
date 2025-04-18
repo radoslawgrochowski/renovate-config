@@ -13,6 +13,7 @@
     "schedule": ["before 4am on friday"]
   },
   "digest": {
+    "enabled": true,
     "automerge": true
   },
   "docker-compose": {
@@ -25,8 +26,9 @@
     "enabled": true
   },
   "npm": {
-    "minimumReleaseAge": "7 days"
+    "enabled": true
   },
+  "minimumReleaseAge": "7 days",
   "packageRules": [
     {
       "description": "Nix: Weekly flake.lock maintenance",
@@ -39,6 +41,7 @@
       "description": "Automerge patch and minor updates for GitHub Actions",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
+      "minimumReleaseAge": "7 days",
       "automerge": true
     }
   ]
