@@ -1,14 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "addLabels": ["deps"],
   "dependencyDashboard": true,
   "extends": [
     "config:best-practices",
     "helpers:pinGitHubActionDigestsToSemver"
   ],
-  "lockFileMaintenance": { "enabled": true },
-  "nix": { "enabled": true },
-  "npm": { "minimumReleaseAge": "7 days" },
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "nix": {
+    "enabled": true
+  },
+  "npm": {
+    "minimumReleaseAge": "7 days"
+  },
   "packageRules": [
     {
       "description": "Nix: Weekly flake.lock maintenance",
