@@ -7,5 +7,15 @@
   ],
   "lockFileMaintenance": { "enabled": true },
   "nix": { "enabled": true },
-  "npm": { "minimumReleaseAge": "7 days" }
+  "npm": { "minimumReleaseAge": "7 days" },
+  "packageRules": [
+    {
+      "description": "Nix: Weekly flake.lock maintenance",
+      "matchPackageManagers": ["nix"],
+      "lockFileMaintenance": {
+        "schedule": ["before 4am on friday"],
+        "automerge": true
+      }
+    }
+  ]
 }
