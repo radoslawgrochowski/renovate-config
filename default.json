@@ -22,6 +22,9 @@
   "dockerfile": {
     "enabled": true
   },
+  "github-actions": {
+    "enabled": true
+  },
   "nix": {
     "enabled": true
   },
