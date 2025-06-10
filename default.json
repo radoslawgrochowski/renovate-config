@@ -8,6 +8,7 @@
     ":automergeTesters",
     ":automergeTypes"
   ],
+  "reviewers": ["radoslawgrochowski"],
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["before 4am on friday"]
