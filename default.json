@@ -37,22 +37,24 @@
     {
       "description": "Nix: Weekly flake.lock maintenance",
       "matchPackageManagers": ["nix"],
-      "lockFileMaintenance": {
-        "automerge": true
-      }
+      "automerge": true
     },
     {
       "description": "Automerge patch and minor updates for GitHub Actions",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
-      "minimumReleaseAge": "7 days",
       "automerge": true
     },
     {
       "description": "Automerge TypeScript updates in devDependencies",
-      "matchPackagePatterns": ["^typescript$"],
+      "matchPackageNames": ["typescript"],
       "matchDepTypes": ["devDependencies"],
       "automerge": true
+    },
+    {
+      "description": "Disable release age for lockfile maintenance",
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "minimumReleaseAge": null
     }
   ]
 }
