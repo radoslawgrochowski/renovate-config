@@ -3,7 +3,7 @@
   "dependencyDashboard": true,
   "extends": [
     "config:best-practices",
-    "helpers:pinGitHubActionDigestsToSemver",
+    "helpers:pinGitHubActionDigests",
     ":automergeLinters",
     ":automergeTesters",
     ":automergeTypes"
