@@ -35,9 +35,11 @@
   "minimumReleaseAge": "21 days",
   "packageRules": [
     {
-      "description": "Nix: Weekly flake.lock maintenance",
+      "description": "Nix: automerge flake.lock maintenance",
       "matchPackageManagers": ["nix"],
-      "automerge": true
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "automerge": true,
+      "prCreation": "immediate"
     },
     {
       "description": "Automerge patch and minor updates for GitHub Actions",
