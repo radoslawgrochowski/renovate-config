@@ -27,7 +27,8 @@
     "enabled": true
   },
   "nix": {
-    "enabled": true
+    "enabled": true,
+    "minimumReleaseAgeBehaviour": "timestamp-optional"
   },
   "npm": {
     "enabled": true
